@@ -1,0 +1,5 @@
+name 'tst'
+description 'trying . .'
+version '1.0.0'
+maintainer 'Kramer'
+maintainer_email 'git@pianospree.com'
