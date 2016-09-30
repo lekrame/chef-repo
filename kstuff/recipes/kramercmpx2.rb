@@ -7,13 +7,12 @@ file '/tmp/message/motd' do
   mode '0777'
 end
 
-# file '/tmp/message/motd' do
-#   content "\n\nInstance started at #{Time.new.inspect} + "\n\
-#   Node IP address = " + #{node['ipaddress']} +
-#  " running #{node['platform']}\n\n"}
-#   action :create
-#   mode '0777'
-# end
+file '/tmp/message/mot2' do
+  content "\n\nInstance started at #{Time.new.inspect}\
+  Node IP address = #{node['ipaddress']} running #{node['platform']}\n\n"
+  action :create
+  mode 0777
+end
 
 file '~/startup.bash' do
   content "#!/bin/bash\
