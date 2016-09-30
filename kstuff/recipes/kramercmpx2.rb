@@ -14,7 +14,7 @@ file '/tmp/message/mot2' do
   mode 0777
 end
 
-file '~/startup.bash' do
+file '/home/ubuntu/startup.bash' do
   content "#!/bin/bash\
   # peekaboo
   touch /tmp/touchme\
@@ -25,7 +25,7 @@ file '~/startup.bash' do
 end
 
 execute 'start-this-thing' do
-  command '~/startup.bash'
+  command '/home/ubuntu/startup.bash'
 end
 
 Chef::Log.info('did Kramer get logged?')
