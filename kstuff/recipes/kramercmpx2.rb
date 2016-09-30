@@ -15,11 +15,10 @@ file '/tmp/message/mot2' do
 end
 
 file '/home/ubuntu/startup.bash' do
-  content "#!/bin/bash\
-  # peekaboo
-  touch /tmp/touchme\
-  touch /tmp/myjunk
-  "
+  content "#!/bin/bash\n\
+  # peekaboo\n\
+  touch /tmp/touchme\n\
+  touch /tmp/myjunk\n"
   action :create
   mode 0777
 end
