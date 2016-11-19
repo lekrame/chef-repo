@@ -7,22 +7,19 @@ apt_package 'awscli' do
 end
 
 bash 'ini0' do
-	ignore_failure true
 	code 'sudo apt-add-repository ppa:brightbox/ruby-ng'
 end
 
 bash 'ini1' do
-	ignore_failure true
 	code 'sudo apt-get update'
 end
 
 bash 'ini2' do
-	ignore_failure true
 	code 'sudo apt-get -y  install ruby2.2'
 end
 
 bash 'init' do
-	ignore_failure true
+#	ignore_failure true
 	code 'sudo update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby2.2 400 \
 	 --slave /usr/bin/rake rake /usr/bin/rake2.2 \
 	 --slave /usr/bin/ri ri /usr/bin/ri2.2 \
@@ -54,4 +51,3 @@ end
 gem_package 'encrypted_strings' do
   action :install
 end
-
