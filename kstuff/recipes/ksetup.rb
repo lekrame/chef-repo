@@ -34,20 +34,10 @@ bash 'init' do
 	 --slave /usr/share/man/man1/irb.1.gz irb.1.gz /usr/share/man/man1/irb2.2.1.gz'
 end
 
-gem_package 'mail' do
-	ignore_failure true
-  action :install
-end
+gem_package 'mail'
 
-gem_package 'twilio-ruby' do
-	ignore_failure true
-  action :install
-end
+gem_package 'twilio-ruby'
 
-gem_package 'json' do
-  action :install
-end
+gem_package 'json'
 
-gem_package 'encrypted_strings' do
-  action :install
-end
+gem_package 'encrypted_strings'
