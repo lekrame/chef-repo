@@ -1,3 +1,3 @@
-directory 'kramer'
-directory 'kramer/apps'
+directory '~/kramer'
+directory '~/kramer/apps'
 #git 
