@@ -7,7 +7,7 @@ apt_package 'awscli' do
 end
 
 bash do
-	code <<-EOH
+	code <<-EOH'
 	sudo update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby2.2 400 \
 	 --slave /usr/bin/rake rake /usr/bin/rake2.2 \
 	 --slave /usr/bin/ri ri /usr/bin/ri2.2 \
@@ -20,7 +20,7 @@ bash do
 	 --slave /usr/share/man/man1/rdoc.1.gz rdoc.1.gz /usr/share/man/man1/rdoc2.2.1.gz \
 	 --slave /usr/share/man/man1/gem.1.gz gem.1.gz /usr/share/man/man1/gem2.2.1.gz \
 	 --slave /usr/share/man/man1/irb.1.gz irb.1.gz /usr/share/man/man1/irb2.2.1.gz
-	 -EOH
+	 '-EOH
 end
 
 #apt_package 'ruby' do
