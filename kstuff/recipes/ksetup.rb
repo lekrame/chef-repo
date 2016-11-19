@@ -13,17 +13,17 @@ end
 
 bash 'ini1' do
 	ignore_failure true
-	code sudo apt-get update
+	code 'sudo apt-get update'
 end
 
 bash 'ini2' do
 	ignore_failure true
-	code sudo apt-get install ruby2.2
+	code 'sudo apt-get install ruby2.2'
 end
 
 bash 'init' do
 	ignore_failure true
-	code sudo update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby2.2 400 \
+	code 'sudo update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby2.2 400 \
 	 --slave /usr/bin/rake rake /usr/bin/rake2.2 \
 	 --slave /usr/bin/ri ri /usr/bin/ri2.2 \
 	 --slave /usr/bin/rdoc rdoc /usr/bin/rdoc2.2 \
@@ -34,7 +34,7 @@ bash 'init' do
 	 --slave /usr/share/man/man1/ri.1.gz ri.1.gz /usr/share/man/man1/ri2.2.1.gz \
 	 --slave /usr/share/man/man1/rdoc.1.gz rdoc.1.gz /usr/share/man/man1/rdoc2.2.1.gz \
 	 --slave /usr/share/man/man1/gem.1.gz gem.1.gz /usr/share/man/man1/gem2.2.1.gz \
-	 --slave /usr/share/man/man1/irb.1.gz irb.1.gz /usr/share/man/man1/irb2.2.1.gz
+	 --slave /usr/share/man/man1/irb.1.gz irb.1.gz /usr/share/man/man1/irb2.2.1.gz'
 end
 
 gem_package 'mail' do
