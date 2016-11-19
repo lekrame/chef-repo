@@ -18,7 +18,7 @@ end
 
 bash 'ini2' do
 	ignore_failure true
-	code 'sudo apt-get install ruby2.2'
+	code 'sudo apt-get -y  install ruby2.2'
 end
 
 bash 'init' do
