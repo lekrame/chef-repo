@@ -6,7 +6,7 @@ apt_package 'awscli' do
   action :install
 end
 
-bash do
+bash 'init' do
 	code 'sudo apt-add-repository ppa:brightbox/ruby-ng
 	sudo apt-get update
 	sudo apt-get install ruby2.2
