@@ -2,16 +2,21 @@ apt_update 'update' do
 	action :update
 end
 
-apt_package 'awscli' do
-  action :install
-end
-
 bash 'ini0' do
 	code 'sudo apt-add-repository ppa:brightbox/ruby-ng'
 end
 
 bash 'ini1' do
 	code 'sudo apt-get update'
+end
+
+git 'bin' do
+	repository 'https://github.com/lekrame/bin.git'
+end
+
+bash 'profile' do
+	code 'ln -s bin/.bash_profile .bash_profile '
+	code 'ln -s bin/.profile .profile '
 end
 
 bash 'ini2' do
@@ -33,11 +38,3 @@ bash 'init' do
 	 --slave /usr/share/man/man1/gem.1.gz gem.1.gz /usr/share/man/man1/gem2.2.1.gz \
 	 --slave /usr/share/man/man1/irb.1.gz irb.1.gz /usr/share/man/man1/irb2.2.1.gz'
 end
-
-gem_package 'mail'
-
-gem_package 'twilio-ruby'
-
-gem_package 'json'
-
-gem_package 'encrypted_strings'
