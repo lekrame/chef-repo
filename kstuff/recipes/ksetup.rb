@@ -10,9 +10,7 @@ bash 'ini1' do
 	code 'sudo apt-get update'
 end
 
-directory
-	'/home/ubuntu/bin'
-end
+directory '/home/ubuntu/bin'
 
 git 'bin' do
 	repository 'https://github.com/lekrame/bin.git bin'
