@@ -14,7 +14,7 @@ directory '/home/ubuntu/bin'
 
 git 'bin' do
 	repository 'https://github.com/lekrame/bin.git'
-	destination 'bin'
+	action :checkout
 end
 
 bash 'profile' do
