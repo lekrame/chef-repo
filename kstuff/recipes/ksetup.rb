@@ -13,7 +13,8 @@ end
 directory '/home/ubuntu/bin'
 
 git 'bin' do
-	repository 'https://github.com/lekrame/bin.git bin'
+	repository 'https://github.com/lekrame/bin.git'
+	destination 'bin'
 end
 
 bash 'profile' do
