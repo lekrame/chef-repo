@@ -10,7 +10,12 @@ bash 'ini1' do
 	code 'sudo apt-get update'
 end
 
-directory '/home/ubuntu/bin'
+directory '/home/ubuntu/bin' do
+	owner 'ubuntu'
+	group 'ubuntu'
+	mode '0777'
+	action :create
+end
 
 git 'bin' do
 	repository 'https://github.com/lekrame/bin.git'
