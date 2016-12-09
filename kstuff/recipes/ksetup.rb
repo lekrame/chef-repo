@@ -22,10 +22,10 @@ git 'bin' do
 	action :checkout
 end
 
-bash 'profile' do
-	code 'ln -s bin/.bash_profile .bash_profile '
-	code 'ln -s bin/.profile .profile '
-end
+#bash 'profile' do
+#	code 'ln -s bin/.bash_profile .bash_profile '
+#	code 'ln -s bin/.profile .profile '
+#end
 
 bash 'ini2' do
 	code 'sudo apt-get -y  install ruby2.2'
