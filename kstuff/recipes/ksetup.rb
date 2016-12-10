@@ -17,8 +17,8 @@ directory '/home/ubuntu/bin' do
 	action :create
 end
 
-git 'bin' do
-	repository 'https://github.com/lekrame/bin.git'
+git '/home/ubuntu' do
+	repository 'git://github.com/lekrame/bin.git'
 	action :checkout
 end
 
