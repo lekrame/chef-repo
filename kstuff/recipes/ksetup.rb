@@ -7,7 +7,7 @@ bash 'ini0' do
 end
 
 bash 'ini1' do
-	code 'sudo apt-get update'
+	code 'sudo apt-get upgrade'
 end
 
 directory '/home/ubuntu/bin' do
@@ -17,15 +17,16 @@ directory '/home/ubuntu/bin' do
 	action :create
 end
 
-git '/home/ubuntu' do
+git '/home/ubuntu/bin' do
 	repository 'git://github.com/lekrame/bin.git'
 	action :checkout
 end
 
-#bash 'profile' do
-#	code 'ln -s bin/.bash_profile .bash_profile '
-#	code 'ln -s bin/.profile .profile '
-#end
+bash 'profile' do
+	code 'ln -s bin/.aliases .aliases '
+	code 'ln -s bin/.bash_profile .bash_profile '
+	code 'ln -s bin/.exrc .exrc '
+end
 
 bash 'ini2' do
 	code 'sudo apt-get -y  install ruby2.2'
