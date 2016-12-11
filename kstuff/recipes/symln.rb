@@ -1,12 +1,5 @@
 bash 'profile' do
-	code <<-EOH
-	touch .aliases; rm -f  .aliases 
-	touch .bash_profile; rm -f  .bash_profile 
-	touch .exrc; rm -f  .exrc 
-	ln -s bin/.aliases .aliases 
-	ln -s bin/.bash_profile .bash_profile 
-	ln -s bin/.exrc .exrc 
-	EOH
+	code ' touch .aliases; rm -f  .aliases ; touch .bash_profile; rm -f  .bash_profile ; touch .exrc; rm -f  .exrc ; ln -s bin/.aliases .aliases ; ln -s bin/.bash_profile .bash_profile ; ln -s bin/.exrc .exrc '
 end
 #bash 'profile' do
 #	code 'touch .aliases; rm -f  .aliases '
