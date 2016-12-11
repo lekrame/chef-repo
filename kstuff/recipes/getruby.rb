@@ -1,5 +1,5 @@
 bash 'ini2' do
-	code 'yes "" | sudo apt-get -y  install ruby2.2'
+	code 'sudo apt-get -y  install ruby2.2'
 end
 
 bash 'init' do
