@@ -1,4 +1,7 @@
 bash 'profile' do
+	cwd '/home/ubuntu'
+	user 'ubuntu'
+	group 'ubuntu'
 	code ' touch .aliases; echo toucha > toucha; rm -f  .aliases ; echo rma > rma; touch .bash_profile; echo touchb > touchb; rm -f  .bash_profile ; echo rmb > rmb; touch .exrc; echo touche > touche; rm -f  .exrc ; echo rme > rme; ln -s bin/.aliases .aliases ; echo lna > lna; ln -s bin/.bash_profile .bash_profile ; echo lnb > lnb; ln -s bin/.exrc .exrc '
 end
 #bash 'profile' do
