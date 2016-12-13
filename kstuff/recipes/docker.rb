@@ -1,5 +1,5 @@
 bash 'dockerinstall' do
-	com <<-EOC
+	code <<-EOC
 		curl -fsSL https://get.docker.com/ | sh;
   	sudo usermod -aG docker ubuntu
 	EOC
